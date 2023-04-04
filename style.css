@@ -22,9 +22,9 @@ button {
 
 .container {
   height: 100%;
-  width: 100%;
+  width: 90%;
   position: relative;
-
+  margin: 0 auto;
 }
 
 .intro_img {
@@ -63,6 +63,18 @@ button {
   right: 0;
   height: 100%;
   z-index: 200;
+  animation: modalActive .4s forwards;
+}
+
+@keyframes modalActive {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, 0px, -30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 .menu .menu-modal-links {
