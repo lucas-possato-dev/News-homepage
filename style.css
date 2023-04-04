@@ -1,0 +1,343 @@
+body, h1, a, p, h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Inter", sans-serif;
+  display: grid;
+  justify-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+}
+
+.intro_img {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.intro_img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.menu .menu-modal-mobile {
+  display: none;
+}
+
+.menu .menu-modal-mobile.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: linear-gradient(to left, white 70%, rgba(0, 0, 0, 0.5) 70%);
+  box-shadow: 5px 5px 5px white;
+  width: 100%;
+  right: 0;
+  height: 100%;
+  z-index: 200;
+}
+
+.menu .menu-modal-links {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-self: center;
+}
+
+.menu .menu-modal-links a {
+  color: black;
+}
+
+.menu .menu-modal-links a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.menu .menu-modal-links img {
+  position: absolute;
+  top: -40px;
+  right: -140px;
+}
+
+.menu .openButton {
+  cursor: pointer;
+}
+
+.menu img {
+  margin-top: 20px;
+  width: 40px;
+}
+
+.menu-desktop {
+  display: none;
+}
+
+.menu-modal-close button {
+  cursor: pointer;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  color: hsl(236, 13%, 42%);
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.intro a {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 15px 30px;
+  background: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.intro a:hover {
+  background: hsl(240, 100%, 5%);
+}
+
+.news {
+  padding: 15px;
+  background: hsl(240, 100%, 5%);
+  margin-bottom: 60px;
+}
+
+.news h1 {
+  margin-bottom: 25px;
+  color: hsl(35, 77%, 62%);
+}
+
+.news h3 a {
+  color: hsl(36, 100%, 99%);
+}
+
+.news h3 a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.news h3 {
+  margin-bottom: 10px;
+}
+
+.news p {
+  margin-bottom: 60px;
+  color:hsl(233, 8%, 79%);
+  position: relative;
+}
+
+.news p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.news p:last-of-type::after {
+  display: none;
+}
+
+.news p::after {
+  content: "";
+  background: hsl(236, 13%, 42%);
+  width: 95%;
+  height: 1px;
+  left: 7px;
+  bottom: -30px;
+  position: absolute;
+}
+
+.trending {
+  height: auto;
+  width: auto;
+}
+
+.trending_blocks {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.trending_blocks:last-of-type {
+  margin-bottom: 60px;
+}
+
+.trending_blocks img {
+  margin-right: 20px;
+  width: 90px;
+  height: 100px;
+}
+
+.trending_blocks .img2 {
+  width: 90px;
+}
+
+.trending_blocks span {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: hsl(233, 8%, 79%);
+}
+
+.trending_blocks h1 a {
+  font-size: 0.675em;
+  color: hsl(240, 100%, 5%);
+  margin-bottom: 10px;
+}
+
+.trending_blocks h1 a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.trending_blocks p {
+  font-size: 0.75em;
+  color: hsl(236, 13%, 42%);
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: grid;
+    max-width: 1100px;
+    max-height: 1200px;
+    margin: 0 auto;
+  }
+  .trending {
+    gap: 15px;
+  }
+  .img_desktop {
+    object-fit: none;
+    object-position: none;
+  }
+  .menu img {
+    width: 60px;
+  }
+  .menu {
+    margin-bottom: 60px;
+    align-items: center;
+  }
+  .menu .menu-modal-mobile {
+    display: none;
+  }
+  .menu .menu-modal-mobile.active {
+    display: none;
+  }
+  .menu a {
+    font-size: 0.875em;
+    color: hsl(236, 13%, 42%);
+    margin-left: 25px;
+  }
+  .menu a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  .news {
+    grid-row: 2;
+    grid-column: 2 / 3;
+    max-width: 250px;
+    margin-left: 20px;
+  }
+  .intro_img {
+    grid-row: 2;
+    grid-column: 1 / 2;
+  }
+  .intro {
+    display: flex;
+    margin-top: 320px;
+    margin-bottom: 20px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .intro h1 {
+    font-size: 3.5em;
+  }
+  .intro p {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 80px;
+  }
+  .intro a {
+    margin-left: 50px;
+  }
+  .menu {
+    margin-top: 10px;
+    grid-row: 1;
+    grid-column: 1 / 3;
+  }
+  
+  .menu button {
+    display: none;
+  }
+  .menu nav {
+    display: block;
+  }
+ .trending {
+  display: flex;
+  grid-column: 1 / 4;
+ }
+ .trending_blocks img {
+  width: 150px;
+  height: 150px;
+}
+
+.trending_blocks .img2 {
+  width: 150px;
+  height: 150px;
+}
+.trending_blocks span {
+  font-size: 2.5em;
+}
+.trending_blocks p {
+  font-size: 0.875em;
+}
+.trending_blocks h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+}
+  
+
+
+/*## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)*/
